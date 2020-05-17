@@ -1,6 +1,6 @@
 {
   "name": "svelte-page-progress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Noman Gul <nomangul2001@gmail.com>",
   "description": "Svelte Component that tracks a users progress through a page as they scroll",
   "svelte": "src/index.js",
