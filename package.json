@@ -1,0 +1,39 @@
+{
+  "name": "svelte-page-progress",
+  "version": "1.0.0",
+  "author": "Noman Gul <nomangul2001@gmail.com>",
+  "description": "Svelte Component that tracks a users progress through a page as they scroll",
+  "svelte": "src/index.js",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NomanGul/svelte-page-progress.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NomanGul/svelte-page-progress/issues"
+  },
+  "homepage": "https://github.com/NomanGul/svelte-page-progress",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "rollup": "^2.10.2",
+    "rollup-plugin-svelte": "^5.2.2",
+    "svelte": "^3.22.3"
+  },
+  "keywords": [
+    "svelte",
+    "svelte-page-progress",
+    "blogs",
+    "svelte-component",
+    "svelte-progress-bar"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ]
+}
