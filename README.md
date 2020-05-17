@@ -1,35 +1,51 @@
-*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*
+# svelte-page-progress
 
----
+> Svelte Component that tracks a users progress through a page as they scroll
 
-# component-template
+[![NPM](https://img.shields.io/npm/v/svelte-page-progress.svg)](https://www.npmjs.com/package/svelte-page-progress) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-A base for building shareable Svelte components. Clone it with [degit](https://github.com/Rich-Harris/degit):
+
+**Watch Demo [Here](https://svelte.dev/repl/e9e33bd005874264917a14c3c252124c?version=3.22.3)**
+
+## Install
 
 ```bash
-npx degit sveltejs/component-template my-new-component
-cd my-new-component
-npm install # or yarn
+npm install svelte-page-progress
 ```
 
-Your component's source code lives in `src/Component.svelte`.
+OR
 
-You can create a package that exports multiple components by adding them to the `src` directory and editing `src/index.js` to reexport them as named exports.
+```bash
+yarn add svelte-page-progress
+```
 
-TODO
+## Usage
 
-* [ ] some firm opinions about the best way to test components
-* [ ] update `degit` so that it automates some of the setup work
+```svelte
+<script>
+  import PageProgress from "svelte-page-progress"
+</script>
 
+<PageProgress color="red" heigh="1vh" />
+```
 
-## Setting up
+## Props
 
-* Run `npm init` (or `yarn init`)
-* Replace this README with your own
+| Props  |  Type  | Default | Value                                                                                                                                            |
+| :----- | :----: | :--------: | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| color  | string |     `SkyBlue`     | valid [CSS background property](https://developer.mozilla.org/en-US/docs/Web/CSS/background) value |
+| height | string |     `4px`     | valid [CSS height property](https://developer.mozilla.org/en-US/docs/Web/CSS/height) value                                                                                                               |
 
+## License
 
-## Consuming components
+MIT © [NomanGul](https://github.com/NomanGul)
 
-Your package.json has a `"svelte"` field pointing to `src/index.js`, which allows Svelte apps to import the source code directly, if they are using a bundler plugin like [rollup-plugin-svelte](https://github.com/sveltejs/rollup-plugin-svelte) or [svelte-loader](https://github.com/sveltejs/svelte-loader) (where [`resolve.mainFields`](https://webpack.js.org/configuration/resolve/#resolve-mainfields) in your webpack config includes `"svelte"`). **This is recommended.**
+## Feedback 
+Any questions or suggestions?
 
-For everyone else, `npm run build` will bundle your component's source code into a plain JavaScript module (`dist/index.mjs`) and a UMD script (`dist/index.js`). This will happen automatically when you publish your component to npm, courtesy of the `prepublishOnly` hook in package.json.
+You are welcome to discuss it on:
+
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/NomanGulKhan)
+
+<br/>
+<br/>
