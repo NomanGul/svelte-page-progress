@@ -2,14 +2,18 @@
   let width = "0%"
 
   // props with default values
-  export let color = "skyblue"
-  export let height = "4px"
-
+  export let color = "skyblue";
+  export let height = "4px";
+  export let position = "top";
+  export let zIndex = 999;
+  export let opacity = 1;
   const { style } = document.documentElement
 
   $: style.setProperty("--spp-color", color)
   $: style.setProperty("--spp-height", height)
   $: style.setProperty("--spp-width", width)
+  $: style.setProperty("--spp-opacity", opacity)
+  $: style.setProperty("--spp-zindex", zIndex)
 
   const watchScrolling = () => {
     const { scrollHeight, clientHeight, scrollTop } = document.documentElement
@@ -37,15 +41,25 @@
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
+    z-index: var(--spp-zindex);
     background: var(--spp-color);
     height: var(--spp-height);
     width: var(--spp-width);
+    opacity: var(--spp-opacity);
     transition: width 200ms ease-out;
+  }
+  .top{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .bottom{
+      bottom: 0px;
+      left: 0px;
   }
 </style>
 
-<div class="svelte-page-progress"></div>
+<div class="svelte-page-progress {position}"></div>
 <svelte:window on:scroll={watchScrollingDebounce} />
